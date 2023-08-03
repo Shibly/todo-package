@@ -1,0 +1,46 @@
+{
+  "name": "shibly/todo-package",
+  "description": "A simple package to manage your todo list",
+  "license": "GPL",
+  "autoload": {
+    "psr-4": {
+      "Shibly\\TodoPackage\\": "src/TodoPackage"
+    }
+  },
+  "authors": [
+    {
+      "name": "Shibly",
+      "email": "shibly.phy@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.1",
+    "illuminate/support": "v10.17.1",
+    "illuminate/routing": "10.*",
+    "illuminate/view": "10.*",
+    "illuminate/config": "10.*",
+    "illuminate/database": "10.17.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0|^10.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Shibly\\TodoPackage\\Tests\\": "tests"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Shibly\\TodoPackage\\TodoPackageServiceProvider"
+      ],
+      "aliases": {
+        "TodoPackage": "Shibly\\TodoPackage\\Facades\\TodoPackage"
+      }
+    }
+  }
+}
